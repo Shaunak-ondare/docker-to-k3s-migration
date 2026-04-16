@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: lumina-service
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: lumina-app
   ports:
     - port: 80
       targetPort: 80
-      nodePort: 30007
