@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: lumina-app
+  namespace: dev
 spec:
   replicas: 1
   selector:
@@ -13,7 +14,7 @@ spec:
         app: lumina-app
     spec:
       containers:
-      - name: lumina-app
-        image: shaunakondare/lumina-jump:latest
-        ports:
-        - containerPort: 80
+        - name: lumina-app
+          image: shaunakondare/lumina-jump:latest
+          ports:
+            - containerPort: 80

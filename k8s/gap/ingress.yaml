@@ -18,12 +18,12 @@ metadata:
     traefik.ingress.kubernetes.io/router.middlewares: gap-strip-prefix@kubernetescrd
 spec:
   rules:
-  - http:
-      paths:
-      - path: /gap
-        pathType: Prefix
-        backend:
-          service:
-            name: lumina-service
-            port:
-              number: 80
+    - http:
+        paths:
+          - path: /gap
+            pathType: Prefix
+            backend:
+              service:
+                name: lumina-service
+                port:
+                  number: 80

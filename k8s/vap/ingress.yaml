@@ -18,12 +18,12 @@ metadata:
     traefik.ingress.kubernetes.io/router.middlewares: vap-strip-prefix@kubernetescrd
 spec:
   rules:
-  - http:
-      paths:
-      - path: /vap
-        pathType: Prefix
-        backend:
-          service:
-            name: lumina-service
-            port:
-              number: 80
+    - http:
+        paths:
+          - path: /vap
+            pathType: Prefix
+            backend:
+              service:
+                name: lumina-service
+                port:
+                  number: 80
